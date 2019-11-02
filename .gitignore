@@ -1,4 +1,8 @@
-# Ignore JetBrains IDE files.
+# JetBrains IDE files.
 .idea
 
+# PHPUnit files.
+.phpunit.result.cache
+
+# Composer libraries.
 /vendor/
