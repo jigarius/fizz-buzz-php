@@ -1,0 +1,14 @@
+{
+    "name": "jigarius/fizzbuzz",
+    "description": "A demonstration of PHP code.",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Jigar Mehta",
+            "homepage": "https://jigarius.com/"
+        }
+    ],
+    "require": {
+        "phpunit/phpunit": "^8.4"
+    }
+}
