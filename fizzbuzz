@@ -1,0 +1,22 @@
+#!/usr/bin/php
+<?php
+
+/**
+ * FizzBuzz entry point.
+ */
+
+require 'lib/fizzbuzz.php';
+
+# Limit must be defined.
+if (count($argv) !== 2 || !is_numeric($argv[1])) {
+  throw new Exception('A limit (number) must be specified.');
+}
+$limit = intval($argv[1]);
+
+# Generate FizzBuzz
+$output = FizzBuzz::processRange(1, $limit);
+foreach ($output as $line) {
+  echo $line . "\n";
+}
+
+exit(0);
