@@ -5,7 +5,7 @@
  * FizzBuzz entry point.
  */
 
-require 'lib/fizzbuzz.php';
+require 'vendor/autoload.php';
 
 # Limit must be defined.
 if (count($argv) !== 2 || !is_numeric($argv[1])) {
