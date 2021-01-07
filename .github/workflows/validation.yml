@@ -12,4 +12,4 @@ jobs:
       - name: Prepare
         run: composer install
       - name: Test
-        run: composer exec phpunit
+        run: composer exec phpunit -v
