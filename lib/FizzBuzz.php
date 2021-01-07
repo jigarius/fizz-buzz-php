@@ -33,23 +33,6 @@ class FizzBuzz {
   /**
    * Return fizz buzz for a range of numbers.
    *
-   * @param int[] $numbers
-   *   An array of numbers.
-   *
-   * @return array
-   *   An array containing "fizzbuzz" equivalent of each number.
-   */
-  public static function processArray(array $numbers): array {
-    $output = [];
-    foreach ($numbers as $key => $number) {
-      $output[$key] = self::processNumber($number);
-    }
-    return $output;
-  }
-
-  /**
-   * Return fizz buzz for a range of numbers.
-   *
    * @param int $from
    *   Range start.
    * @param int $till
@@ -60,6 +43,23 @@ class FizzBuzz {
    */
   public static function processRange(int $from, int $till): array {
     return self::processArray(range($from, $till));
+  }
+
+  /**
+   * Return fizz buzz for a range of numbers.
+   *
+   * @param int[] $numbers
+   *   An array of numbers.
+   *
+   * @return array
+   *   An array containing "fizzbuzz" equivalent of each number.
+   */
+  private static function processArray(array $numbers): array {
+    $output = [];
+    foreach ($numbers as $key => $number) {
+      $output[$key] = self::processNumber($number);
+    }
+    return $output;
   }
 
 }

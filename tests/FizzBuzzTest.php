@@ -44,16 +44,6 @@ class FizzBuzzTest extends TestCase {
   }
 
   /**
-   * Test for an array of numbers.
-   */
-  public function testArray() {
-    $this->assertEquals(
-      FizzBuzz::processArray([1, 3, 5, 15]),
-      [1, 'fizz', 'buzz', 'fizzbuzz']
-    );
-  }
-
-  /**
    * Test for number range 1 to 15.
    */
   public function testRange() {
