@@ -1,0 +1,18 @@
+name: fizz-buzz-php
+services:
+  main:
+    type: php:7.3
+    build:
+      - composer install
+      - chmod +x ./fizzbuzz
+    environment:
+      XTERM: xterm-256color
+tooling:
+  fizzbuzz:
+    service: main
+    cmd: ./fizzbuzz
+  composer:
+    service: main
+  phpunit:
+    service: main
+    cmd: composer exec phpunit
