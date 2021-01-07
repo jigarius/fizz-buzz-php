@@ -1,7 +1,5 @@
 # Fizz Buzz
 
-[![Build Status](https://travis-ci.org/jigarius/fizz-buzz.svg?branch=php%2F7.x)](https://travis-ci.org/jigarius/fizz-buzz)
-
 A small, neat and clean command-line application to demonstrate PHP syntax to
 people who've never seen PHP code before. It also demonstrates simple writing
 simple tests with `phpunit`.
