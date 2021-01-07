@@ -16,6 +16,6 @@ three with the word *fizz*, and any number divisible by five with the word
 ## Usage
 
 * Clone the repository.
-* Add `execute` permissions to the `fizzbuzz` file in the root of the project;
+* Add exec permissions to the `fizzbuzz` file;
   `chmod +x ./fizzbuzz`.
 * Run the `fizzbuzz` file with a numeric argument; `./fizzbuzz 15`
