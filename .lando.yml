@@ -4,13 +4,14 @@ services:
     type: php:7.3
     build:
       - composer install
-      - chmod +x ./fizzbuzz
-    environment:
-      XTERM: xterm-256color
+      - chmod +x ./bin/fizzbuzz
+    overrides:
+      environment:
+        XTERM: xterm-256color
 tooling:
   fizzbuzz:
     service: main
-    cmd: ./fizzbuzz
+    cmd: ./bin/fizzbuzz
   composer:
     service: main
   lint:
