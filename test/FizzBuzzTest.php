@@ -8,9 +8,21 @@ use PHPUnit\Framework\TestCase;
 class FizzBuzzTest extends TestCase {
 
   /**
-   * Test for number range 1 to 15.
+   * Generate throws an Exception if $limit is invalid.
    */
-  public function testGenerate() {
+  public function testGenerateInvalid() {
+    $limits = [0, -1];
+    foreach ($limits as $limit) {
+      $this->expectException(\InvalidArgumentException::class);
+
+      FizzBuzz::generate($limit);
+    }
+  }
+
+  /**
+   * Generate can generate fizzbuzz from 1 to 15.
+   */
+  public function testGenerateFifteen() {
     $this->assertEquals(FizzBuzz::generate(15), [
       '1',
       '2',
