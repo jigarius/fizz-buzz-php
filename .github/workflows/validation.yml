@@ -11,5 +11,7 @@ jobs:
           php-version: '7.4'
       - name: Prepare
         run: composer install
+      - name: Lint
+        run: composer exec phpcs
       - name: Test
         run: composer exec phpunit -v
