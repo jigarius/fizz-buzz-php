@@ -2,8 +2,6 @@
 
 namespace FizzBuzz;
 
-use http\Exception\InvalidArgumentException;
-
 /**
  * A Fizz-Buzz Number.
  */
@@ -22,7 +20,7 @@ class Number {
    * @param int $integer
    *   A positive integer.
    */
-  function __construct(int $integer) {
+  public function __construct(int $integer) {
     if ($integer <= 0) {
       throw new \InvalidArgumentException('Argument must be a positive integer.');
     }
@@ -50,15 +48,28 @@ class Number {
     return $this->integer % 5 === 0;
   }
 
-  function __toString(): string {
+  /**
+   * Stringifies the object.
+   *
+   * @return string
+   *   A string representation of the object.
+   */
+  public function __toString(): string {
     $result = '';
 
-    if ($this->isFizz()) $result .= 'fizz';
-    if ($this->isBuzz()) $result .= 'buzz';
+    if ($this->isFizz()) {
+      $result .= 'fizz';
+    }
 
-    if ($result) return $result;
+    if ($this->isBuzz()) {
+      $result .= 'buzz';
+    }
 
-    return (string) $this->integer;
+    if (!$result) {
+      $result = (string) $this->integer;
+    }
+
+    return (string) $result;
   }
 
 }

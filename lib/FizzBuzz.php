@@ -3,7 +3,7 @@
 use FizzBuzz\Number;
 
 /**
- * Class FizzBuzz.
+ * Fizz-Buzz helper.
  */
 class FizzBuzz {
 

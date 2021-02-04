@@ -13,6 +13,9 @@ tooling:
     cmd: ./fizzbuzz
   composer:
     service: main
-  phpunit:
+  lint:
+    service: main
+    cmd: composer exec phpcs
+  test:
     service: main
     cmd: composer exec phpunit
