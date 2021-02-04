@@ -1,7 +1,7 @@
 name: fizz-buzz-php
 services:
   main:
-    type: php:7.3
+    type: php:7.4
     build:
       - composer install
       - chmod +x ./bin/fizzbuzz
