@@ -15,10 +15,10 @@
         ]
     },
     "require-dev": {
-        "phpunit/phpunit": "^3.7",
-        "squizlabs/php_codesniffer": "^3.5",
-        "drupal/coder": "^8.3",
-        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1"
+        "phpunit/phpunit": "^11.5",
+        "squizlabs/php_codesniffer": "^3.13",
+        "drupal/coder": "^8.3.24",
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0"
     },
     "config": {
         "allow-plugins": {
@@ -27,5 +27,9 @@
     },
     "require": {
         "php": "^8.3"
+    },
+    "scripts": {
+        "lint": "phpcs",
+        "test": "phpunit"
     }
 }
