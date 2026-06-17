@@ -39,10 +39,12 @@ fizzbuzz
   `chmod +x ./bin/fizzbuzz`.
 * Run it with a numeric argument; `./bin/fizzbuzz 15`
 
-### Lando
+### Docker Compose
 
-If you use Lando, you can run this project in a Docker container instead.
+If you use Docker, you can run this project in a container instead.
 
 * Clone this repository and `cd` into the directory.
-* Run `lando start`.
-* Run `lando fizzbuzz` with a numeric argument; `lando fizzbuzz 15`.
+* Build the image; `make build`.
+* Open a shell in the container; `make ssh`.
+* Inside the container, install dependencies; `composer install`.
+* Inside the container, run it with a numeric argument; `./bin/fizzbuzz 15`.

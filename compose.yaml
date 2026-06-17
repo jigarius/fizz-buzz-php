@@ -1,0 +1,8 @@
+name: fizz-buzz-php
+
+services:
+  main:
+    build: .
+    working_dir: /app
+    volumes:
+      - .:/app
