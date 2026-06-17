@@ -7,9 +7,11 @@
 
 require 'vendor/autoload.php';
 
+use FizzBuzz\Generator;
+
 try {
   $limit = count($argv) === 2 ? (int) $argv[1] : 0;
-  $output = FizzBuzz::generate($limit);
+  $output = Generator::range($limit);
 }
 catch (InvalidArgumentException $ex) {
   echo $ex->getMessage();
